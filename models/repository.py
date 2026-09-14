@@ -5,7 +5,7 @@ from typing import Optional
 @dataclass
 class Repository:
     name: str
+    stars: int
+    url: str
     description: Optional[str] = None
-    stars: int = 0
     language: Optional[str] = None
-    url: str = ""
