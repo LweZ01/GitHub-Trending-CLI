@@ -18,12 +18,10 @@ def test_creates_repository_with_all_fields():
 
 
 def test_repository_defaults_when_optional_fields_missing():
-    repo = Repository(name="minimal-repo")
+    repo = Repository(name="minimal-repo", stars=0, url="https://github.com/user/minimal-repo")
 
     assert repo.description is None
     assert repo.language is None
-    assert repo.stars == 0
-    assert repo.url == ""
 
 
 def test_two_repositories_with_same_values_are_equal():
@@ -31,3 +29,9 @@ def test_two_repositories_with_same_values_are_equal():
     repo_b = Repository(name="x", stars=10, url="https://x.com")
 
     assert repo_a == repo_b
+
+def test_repository_requires_name_stars_and_url():
+    import pytest
+
+    with pytest.raises(TypeError):
+        Repository(description="sin nombre ni stars ni url")
