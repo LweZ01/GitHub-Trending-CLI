@@ -1,0 +1,34 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Bytecode y caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caché de pytest
+.pytest_cache/
+.cache/
+
+# Cobertura de tests
+.coverage
+htmlcov/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos específicos de Windows
+Thumbs.db
+desktop.ini
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+
+# Variables de entorno (por si en el futuro agregas un token de GitHub)
+.env
